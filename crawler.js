@@ -62,8 +62,13 @@ function acessRecipe(option, callback){
         if(err) console.log('Erro: ' + err);
         var $ = cheerio.load(body);
         var results = []
-        console.log($('.col-lg-8.ingredients-card > ul >li>span>p').text().trim())
-        console.log($('.instructions.e-instructions > ol >li>span>p').text().trim())
+        $('.col-lg-8.ingredients-card > ul >li>span>p').each(function(){
+            console.log($(this).text().trim());
+        })
+        console.log()
+        $('.instructions.e-instructions > ol >li>span>p').each(function(){
+            console.log($(this).text().trim())
+        })
         
         
         
@@ -72,3 +77,4 @@ function acessRecipe(option, callback){
     })
 
 }
+
