@@ -69,11 +69,6 @@ function acessRecipe(option, callback){
         $('.instructions.e-instructions > ol >li>span>p').each(function(){
             console.log($(this).text().trim())
         })
-        
-        
-        
-
-
     })
 
 }
